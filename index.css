@@ -1,0 +1,84 @@
+#title{
+    text-align: center;
+    font-size: 42px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+
+}
+p{
+    font-family: "Dancing Script", cursive;
+    text-align: justify;
+}
+body{
+    background:#F3E0E2;
+}
+
+h2{
+    text-align: center;
+   
+   font-family: 'Times New Roman', Times, serif;
+   font-weight:bolder;
+   font-size: 30px;
+    
+}
+.wrapper{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    justify-content: center;
+    
+
+}
+.container{
+   
+   padding: 1em;
+   width: 300px;
+   height: 400px;
+    box-shadow: 0px 0px 0px 0px;
+
+    
+
+    
+}
+#container-1{
+    flex-wrap: wrap;
+    background-color:whitesmoke;
+}
+#container-2{
+    background:#FF4459;
+    display: grid;
+    float: right;
+}
+input[type=text], input[type=password] {
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+    padding: 8px;
+    border-style: none;
+}
+input[type = submit]{
+
+    box-shadow: 3px 3px 3px 3px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+   display: block;
+   margin: auto;
+
+}
+img{
+    width: 300px;
+    border-radius: 50px;
+    
+    justify-self: center;
+    
+}
+input[type = submit]:active{
+    border-radius: 4px;
+    box-shadow: 0 0 0 0;
+    transition: .3s;
+}
