@@ -1,0 +1,171 @@
+/* Basic styling for the navigation bar */
+body {}
+
+nav {
+
+    position: fixed;
+    /* Fix the navbar at the top */
+    top: 0;
+    place-content: center;
+    /* Align the navbar to the top of the page */
+    width: 100%;
+    /* Make the navbar span the full width of the page */
+    display: flex;
+    justify-content: center;
+
+    margin: 10px 0;
+    padding: 20px;
+
+
+
+    z-index: 1000;
+    /* Ensure the navbar is above other content */
+    transition: all 0.7s;
+}
+
+.navbar:hover {
+    transform: scale(1.2);
+    transition: all .7s;
+}
+
+/* Add some padding to the top of the body to prevent content from being hidden behind the navbar */
+body {
+    padding: 0;
+    /* Adjust this value based on the height of your navbar */
+    margin: 0;
+}
+
+.navbar {
+    background-color: #333;
+    /* Background color of the navbar */
+    font-family: Arial, sans-serif;
+    width: fit-content;
+    list-style-type: none;
+    /* Remove bullets */
+    display: flex;
+    /* Use flexbox for horizontal layout */
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    border-radius: 25px;
+    transition: all .7s;
+}
+
+.navbar li {
+    margin: 0 15px;
+    /* Space between each item */
+}
+
+.navbar a {
+    display: block;
+    /* Make the link fill the list item */
+    color: white;
+    /* Text color */
+    text-align: center;
+    /* Center text within the link */
+    padding: 14px 20px;
+    /* Padding around the text */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    /* Change background on hover */
+    border-radius: 4px;
+    /* Rounded corners on hover */
+}
+
+.shop_image {
+    background-image: url("assets/shop_1bg.jpeg");
+
+
+    height: 30vh;
+    background-repeat: no-repeat;
+    justify-content: space-around;
+    display: flex;
+}
+
+.shop_profile {
+
+    position: relative;
+    background-image: url("assets/shop_profile.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    z-index: 200;
+
+    height: 100px;
+    width: 100px;
+    border-style: solid;
+    border-color: white;
+    align-self: flex-end;
+
+
+}
+
+button {
+    background-color: inherit;
+    border-width: 0;
+
+}
+
+.menu {
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+    background-color: honeydew;
+}
+
+p {
+
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    ;
+    line-height: 18px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+h2 {
+    color: chocolate;
+    text-align: center;
+    font-family: cursive;
+    font-size: 28px;
+
+}
+
+h3,
+h1 {
+    text-align: center;
+}
+
+#checkout>*:hover {
+    color: green;
+}
+
+.check:hover {
+    color: green;
+}
+
+.check>*:active {
+    box-shadow: 50%;
+}
+
+.cancel:hover {
+    color: red;
+}
+
+#ordered {
+    display: flexbox;
+    width: 100px;
+    height: 100px;
+}
+
+.checkout {
+    display: flex;
+    margin: 0 50%;
+}
