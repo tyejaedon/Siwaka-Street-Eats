@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Registration Form</title>
+  <link rel="stylesheet" href="seller_reg.css">
+  
+</head>
+<body>
+    <h1>Business Registration Form</h1>
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="personName">Name of Person:</label>
+            <input type="text" id="personName" name="personName" required>
+        </div>
+        <div class="form-group">
+            <label for="businessName">Name of Business:</label>
+            <input type="text" id="businessName" name="businessName" required>
+        </div>
+        <div class="form-group">
+            <label for="foodLicense">Image of Food License:</label>
+            <input type="file" id="foodLicense" name="foodLicense" accept="image/*" required>
+        </div>
+        <div class="form-group">
+            <label for="paymentMode">Mode of Payment:</label>
+            <select id="paymentMode" name="paymentMode" required>
+                <option value="creditCard">Credit Card</option>
+                <option value="debitCard">Debit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bankTransfer">Bank Transfer</option>
+                <option value="cash">Cash</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="businessImage">Image of Business:</label>
+            <input type="file" id="businessImage" name="businessImage" accept="image/*" required>
+        </div>
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+   
+</body>
+</html>
