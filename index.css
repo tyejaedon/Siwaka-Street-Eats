@@ -54,10 +54,10 @@ form{
 .container{
    
    padding: 1em;
-   width: 400px;
+   width: 35%;
 
   
-   height: 500px;
+   height: 80vh;
     box-shadow: 0px 0px 0px 0px;
 
     transition: .7s;
@@ -66,10 +66,10 @@ form{
 }
 
 #container-1{
-    flex-wrap: wrap;
+    overflow:hidden;
     background-color:rgba(245, 245, 245, 0.63);
     display:grid;
-  
+  transition-delay: .5s;
     pointer-events:all;
     transition: all .7s;
 
@@ -84,13 +84,14 @@ form{
     background-color: rgba(245, 245, 245);
     transform: translate(50%, 0);
     transition: .7s;
+    transition-delay: 0.5s;
 
 }
 #container-1:hover + #container-2{
     visibility: hidden;
    
     opacity: 0;
-
+    transition-delay: .5s;
     transition:all .7s;
 }
 #container-1:hover > form > input{
@@ -100,7 +101,7 @@ form{
 #container-2{
     background:#d006063b;
     display: grid;
-    float: right;
+    
 }
 #container-2:hover{
     background-color: #dc05058c;

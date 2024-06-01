@@ -18,15 +18,15 @@
    <span class="wrapper">
     <div class="container" id = "container-1">
    <h2>Login</h2>
-      <form action="homepage_user.html" method="POST" target="new_blank">
-        <input placeholder="username" type="text" name="uname" required>
+      <form action="/login" method="POST" target="new_blank">
+        <input placeholder="email" type="text" name="email" required>
         <br>
-        <input placeholder="Password" type="password" name="pword" required>
+        <input placeholder="Password" type="password" name="password" required>
         <br>
         <input placeholder="Remember Me" type="checkbox" name="me">
         <br>
         <div id = "flex">
-        <input value="Login" type="submit">
+        <input id = "login" value="Login" type="submit">
         <button type="button"><a href="seller_reg.html"> Register</a></button>
       </div>
         
@@ -54,6 +54,9 @@
       </p>
     </div>
   </span>
+  <script src="server.js">
+
+  </script>
 </span>
 </body>
 </html>
