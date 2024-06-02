@@ -1,0 +1,8 @@
+  const query = "SELECT businessName,businessImage FROM registrations WHERE personName = 'nexus'";
+  try {
+    const [results] = await pool.query(query);
+    res.json(results);
+} catch (err) {
+  console.error('Database query error:', err);
+  res.status(500).send('Internal Server Error');
+}

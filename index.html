@@ -18,12 +18,16 @@
    <span class="wrapper">
     <div class="container" id = "container-1">
    <h2>Login</h2>
-      <form action="/login" method="POST" target="new_blank">
+      <form action="/login" method="POST" id="login_form">
         <input placeholder="email" type="text" name="email" required>
         <br>
         <input placeholder="Password" type="password" name="password" required>
         <br>
-        <input placeholder="Remember Me" type="checkbox" name="me">
+        <label for="usertype">
+          <input id="usertype" type="checkbox">
+          Are you a business? 
+        </label>
+        <br>  
         <br>
         <div id = "flex">
         <input id = "login" value="Login" type="submit">
@@ -54,9 +58,18 @@
       </p>
     </div>
   </span>
-  <script src="server.js">
-
-  </script>
+  
+  <!-- <script>
+    document.getElementById('login_form').addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+        const isBusiness = document.getElementById('usertype').checked;
+        if (!isBusiness) {
+            window.location.href = 'homepage_user.html';
+        } else {
+            window.location.href = 'buyerhomepage.html';
+        }
+    });
+</script> -->
 </span>
 </body>
 </html>

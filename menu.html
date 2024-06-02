@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Item Input</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+        <li><a href="buyerhomepage.html"> Home</a></li>
+        <li><a href="dashboard_by.html"> dashboard</a></li>
+        <li><a href="#contactus"> Contact us</a></li>
+    </ul>
+    </nav>
+    <br>
+    <br>
+    
+<div class="container">
+    <h1>New Menu Item</h1>
+    <form id="menuForm">
+        <label for="menuItem">Menu Item:</label>
+        <input type="text" id="menuItem" name="menuItem" required>
+        
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required>
+        
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+        
+        <button type="submit">Add Menu Item</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('menuForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const menuItem = document.getElementById('menuItem').value;
+        const price = document.getElementById('price').value;
+        const image = document.getElementById('image').files[0];
+        
+        console.log('Menu Item:', menuItem);
+        console.log('Price:', price);
+        console.log('Image:', image);
+        
+        alert('Menu item added successfully!');
+    });
+</script>
+
+</body>
+</html>

@@ -39,6 +39,14 @@ const pool = mysql.createPool({
   password: '12345678',
   database: 'seller',
 });
+
+// this will be used to store user info globally 
+var sessionStore = {};
+
+
+
+
+
 // Handle registration form submission
 app.post('/submit', upload.fields([
   { name: 'foodLicense', maxCount: 1 },
@@ -53,13 +61,13 @@ app.post('/submit', upload.fields([
 
   // Insert form data into MySQL
   const query = 'INSERT INTO registrations (personName, businessName, foodLicense, paymentMode, businessImage, location, email, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
-  db.query(query, [personName, businessName, foodLicensePath, paymentMode, businessImagePath, location, email, hashedPassword], (err, result) => {
+  pool.query(query, [personName, businessName, foodLicensePath, paymentMode, businessImagePath, location, email, hashedPassword], (err, result) => {
     if (err) {
       console.error('Error saving to database:', err);
       return res.status(500).send('Error saving to database');
     }
     res.send('Form submitted successfully');
-    res.redirect('/index.html')
+    return res.redirect('/index.html')
   });
 });
 
@@ -68,10 +76,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'seller_reg.html'));
 });
 
-// Serve the registration form (unchanged)
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'seller_reg.html'));
-});
+
 
 // Handle login request
 app.post('/login', async (req, res) => {
@@ -98,7 +103,11 @@ app.post('/login', async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (isMatch) {
-      res.redirect('/homepage_user.html');
+    sessionStore.businessImage = user.businessImage;
+    sessionStore.businessName = user.businessName;
+
+    
+      res.redirect('/buyerhomepage.html');
       
 
       //  authorized
@@ -117,6 +126,25 @@ app.post('/login', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
+
+//Getting the name of the business using database
+// Retrieve user data by username 'nexus'
+app.get('/userdata', (req, res) => {
+  if (sessionStore.businessName) {
+    res.json({ businessName: sessionStore.businessName , businessImage : sessionStore.businessImage});
+  } else {
+    res.status(401).send('Unauthorized');
+  }
+});
+
+
+
+
+
+
+
+
+
 
 // Serve the login form (assuming it's in index.html)
 app.get('/', (req, res) => {
