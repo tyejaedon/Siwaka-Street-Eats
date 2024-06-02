@@ -7,19 +7,37 @@
     <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-    <nav>
-        <ul class="navbar">
-        <li><a href="buyerhomepage.html"> Home</a></li>
-        <li><a href="dashboard_by.html"> dashboard</a></li>
-        <li><a href="#contactus"> Contact us</a></li>
-    </ul>
-    </nav>
+    <div class="shop_image">
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="buyerhomepage.html"> Home</a></li>
+                <li><a href="dashboard_by.html"> dashboard</a></li>
+                <li><a href="#contactus"> Contact us</a></li>
+            </ul>
+        </nav>
+        <span class="shop_profile"></span>
+    </div>
     <br>
     <br>
     
+    <div class=" menu">
+        <h2>Our Menu</h2>
+        <h3>Main Dishes</h3>
+        <div id="foodItems">
+            
+        </div>
+            
+    </div>
+
+
+
 <div class="container">
     <h1>New Menu Item</h1>
-    <form id="menuForm">
+    <!-- Success Message -->
+    <div id="successMessage" style="display:none; color: green;">Menu item added successfully!</div>
+    
+    <form id="menuForm" action="/menuitems" method="POST" enctype="multipart/form-data">
         <label for="menuItem">Menu Item:</label>
         <input type="text" id="menuItem" name="menuItem" required>
         
@@ -27,27 +45,58 @@
         <input type="number" id="price" name="price" step="0.01" required>
         
         <label for="image">Image:</label>
-        <input type="file" id="image" name="image" accept="image/*" required>
+        <input type="file" id="food_image" name="food_image" accept="image/*" required>
         
         <button type="submit">Add Menu Item</button>
     </form>
 </div>
-
+<img src="data:image/jpeg;base64,dXBsb2Fkc1w0YTFjZDViYzI5OThhYWQ0NmE2MWMyNzA4MTM3N2I1MQ==">
 <script>
-    document.getElementById('menuForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const menuItem = document.getElementById('menuItem').value;
-        const price = document.getElementById('price').value;
-        const image = document.getElementById('image').files[0];
-        
-        console.log('Menu Item:', menuItem);
-        console.log('Price:', price);
-        console.log('Image:', image);
-        
-        alert('Menu item added successfully!');
-    });
+    // Check for success query parameter and display message
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('success')) {
+        document.getElementById('successMessage').style.display = 'block';
+    }
 </script>
+<script>
 
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('/items');
+        const menuItems = await response.json();
+        const container = document.getElementById('foodItems');
+
+        menuItems.forEach(item => {
+            const itemDiv = document.createElement('p');
+           
+
+            const title = document.createElement('span');
+            title.style.fontWeight = 'bold';
+            title.textContent = item.menu_item;
+
+            const price = document.createElement('span');
+            price.textContent = ` - ksh ${item.price}`;
+
+            itemDiv.appendChild(title);
+            itemDiv.appendChild(price);
+
+            if (item.image) {
+                const img = document.createElement('img');
+                img.classList.add('item');
+                const br = document.createElement('br');
+
+                img.src = item.url; 
+                console.log('Image URL:', img.src);
+                itemDiv.appendChild(br);
+                itemDiv.appendChild(img);
+            }
+
+            container.appendChild(itemDiv);
+        });
+    } catch (error) {
+        console.error('Error fetching menu items:', error);
+    }
+});
+</script>
 </body>
 </html>

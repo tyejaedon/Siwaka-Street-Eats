@@ -6,6 +6,9 @@ const mysql = require('mysql2/promise'); // Using promises for cleaner async han
 const bcrypt = require('bcryptjs');
 const bodyParser = require('body-parser');
 
+
+
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -105,6 +108,7 @@ app.post('/login', async (req, res) => {
     if (isMatch) {
     sessionStore.businessImage = user.businessImage;
     sessionStore.businessName = user.businessName;
+    sessionStore.email = user.email;
 
     
       res.redirect('/buyerhomepage.html');
@@ -137,7 +141,68 @@ app.get('/userdata', (req, res) => {
   }
 });
 
+//handling of the menu item table insertion
+app.post('/menuitems', upload.fields([
+  { name: 'food_image', maxCount: 1 }
+]),async(req,res)=>{
+  const connection = await pool.getConnection();
+  try {
+    
+    
 
+  const { menuItem,price} = req.body;
+  const image = req.files?.food_image?.[0]?.path;
+  const query = "INSERT INTO menu_items(menu_item,price,image,email) VALUES(?,?,?,?)";
+  if(image != null){
+    await connection.execute(query,[menuItem,price,image,sessionStore.email]);
+  
+  
+    return res.redirect('/menu.html?success=1');
+  }
+  else{
+    return res.send("No image found");
+  }
+  
+  } catch (err) {
+    console.error('Error saving to database:', err);
+      return res.status(500).send('Error saving to database');
+  }finally{
+    connection.release();
+  }
+
+
+  
+
+});
+//handling of the menu item being on the menu page 
+app.get('/items', async(req, res) => {
+  const connection = await pool.getConnection();
+  try {
+    // Query to find the user by email
+    const query = 'SELECT *  FROM menu_items WHERE email = ?';
+    const [results] = await connection.query(query,[sessionStore.email]);
+    
+
+     // Convert image buffer to base64
+     const menuItems = results.map(item => {
+      item.url = null;
+      if (item.image) {
+        const relativeImagePath = path.relative(__dirname, item.image.toString());
+        item.url = relativeImagePath;
+      }
+      return item;
+    });
+
+    res.json(menuItems);
+ 
+  } catch (error) {
+    console.error('Error fetching menu items:', error);
+    res.status(500).send('Error fetching menu items');
+  }
+  finally{
+    connection.release();
+  }
+});
 
 
 

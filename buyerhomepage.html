@@ -1,52 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="buyerhomepage.css">
     <title>Document</title>
-   
-     
+
+
 </head>
+
 <body>
     <nav>
         <ul class="navbar">
-        <li><a href="buyerhomepage.html"> Home</a></li>
-        <li><a href="dashboard_by.html"> dashboard</a></li>
-        <li><a href="#contactus"> Contact us</a></li>
-    </ul>
+            <li><a href="buyerhomepage.html"> Home</a></li>
+            <li><a href="dashboard_by.html"> dashboard</a></li>
+            <li><a href="#contactus"> Contact us</a></li>
+        </ul>
     </nav>
     <br>
     <br>
     <div class="wrapper">
 
-   
-    <div class="shop">
-        <img src=" " class="images" id="image">
-        <p>
-            <b>Shop:</b> <span id="shop_name"></span>
-            <br>
-           <b> Loved by Customers</b> : fries, chicken
-        </p>
+
+        
+        <a href="menu.html">
+            <div class="shop">
+               
+                <img src=" " class="images" id="image">
+                <p>
+                    <b>Shop:</b> <span id="shop_name"></span>
+                    <br>
+                    <b> Loved by Customers</b> : fries, chicken
+                </p>
+            </div>
+        </a>
     </div>
-</div> 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        fetch('http://localhost:3000/userdata')
-            .then(response => response.json())
-            .then(data => {
-                const shopNameElement = document.getElementById('shop_name');
-                const shopImageElement = document.getElementById('image');
-                if (data.businessName && data.businessImage) {
-                    shopNameElement.textContent = data.businessName;
-                    shopImageElement.src = data.businessImage;
-                } else {
-                    shopNameElement.textContent = 'unknown';
-                    shopImageElement.alt = 'cannot_display';
-                }   
-            })
-            .catch(error => console.error('Error fetching data:', error));
-    });
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('http://localhost:3000/userdata')
+                .then(response => response.json())
+                .then(data => {
+                    const shopNameElement = document.getElementById('shop_name');
+                    const shopImageElement = document.getElementById('image');
+                    if (data.businessName && data.businessImage) {
+                        shopNameElement.textContent = data.businessName;
+                        shopImageElement.src = data.businessImage;
+                    } else {
+                        shopNameElement.textContent = 'unknown';
+                        shopImageElement.alt = 'cannot_display';
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
 </body>
+
 </html>
