@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(assets/contactbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter : blur(4px);
+}
+.header{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+.header h1{
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color :#333;
+    font-family: lucida;
+}
+.header h2{
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: georgia;
+}
+.header p{
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: trebuchet;
+}
+.user_input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.contact_info {
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    min-height: 100vh;
+    padding : 50px;
+    text-align : center;
+}
+.content-wrapper{
+    display : grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+.user_input {
+    display: block;
+    margin-bottom: 10px;
+}
+.user_input h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.form-input{
+margin-bottom: 20px;
+}
+input , textarea {
+    width: 50%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: beige;
+    color: #333;
+}
+input :focus,
+textarea :focus {
+    outline: none;
+    box-shadow: 0 0 8px #bbb;
+}
+button {
+    display: inline-block;
+    padding:12px 24px;
+    background-color: beige;
+    color: #333;
+    border: none;
+    cursor :pointer;
+    transition: 0.3s ease;
+}
+button :hover {
+    background-color: #45a049;
+}
+.contact_info {
+    text-align: left;
+}
+.contact_info h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color :#000000;
+}
+.contact_info p{
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+.contact_info i {
+    color: beige;
+    margin-right: 10px;
+}
+@media screen and (max-width :768){
+    .content{
+        padding :20px;
+    }
+    .content-wrapper{
+        grid-template-columns: repeat(1fr);
+        
+    }
+}
