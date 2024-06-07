@@ -9,7 +9,7 @@ nav {
     justify-content: center;
     
     margin: 10px 0 ;
-    padding:20px;
+ 
     
     
     
@@ -197,3 +197,26 @@ p {
     font-family: cursive;
     text-align: center;
 }
+@media screen and (max-width: 768px) {
+    /* Adjust grid layout for smaller screens */
+    
+    .shop{
+        width: 95%;
+    }
+  
+  .footer-container{
+    display: block;
+  }
+
+
+
+    /* Image sizing and responsiveness */
+    img {
+      max-width: 300px;
+    }
+  
+    /* Shop description text size */
+    .shop p {
+      font-size: 16px;
+    }
+  }
