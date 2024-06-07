@@ -1,158 +1,154 @@
-:root{
+:root {
     --image: url("assets/bg2.jpg");
-
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px; /* Set a base font size */
+    background: #F3E0E2;
+    background-image: var(--image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
 
-
-#title{
+#title {
     text-align: center;
     font-size: 42px;
     font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
-
-
+    margin-top: 20px;
 }
-p{
+
+p {
     font-family: "Dancing Script", cursive;
     text-align: justify;
 }
 
-body{
-    background:#F3E0E2;
-    background-image: var(--image);
-    background-size:cover   ;
-    
-    background-repeat:no-repeat;
-    
-    
-}
-
-h2{
+h2 {
     text-align: center;
-   height: fit-content;
-   font-family: 'Times New Roman', Times, serif;
-   font-weight:bolder;
-   font-size: 30px;
-    
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 30px;
 }
-.wrapper{
+
+.wrapper {
     display: flex;
-    margin: auto;
-    
-    width: fit-content;
-   
     justify-content: center;
-    
-
-}
-form{
-    padding-bottom: 30%;
-}
-.container{
-   
-   padding: 1em;
-   width: 35%;
-
-  
-   height: 80vh;
-    box-shadow: 0px 0px 0px 0px;
-
-    transition: .7s;
-
-    
+    align-items: center;
+    margin: auto;
+    width: 100%;
 }
 
-#container-1{
-    overflow:hidden;
-    background-color:rgba(245, 245, 245, 0.63);
-    display:grid;
-  transition-delay: .5s;
-    pointer-events:all;
-    transition: all .7s;
-
-   
-}
-
-#container-1:hover {
-  
-
-   
-    place-items: center;
-    background-color: rgba(245, 245, 245);
-    transform: translate(50%, 0);
-    transition: .7s;
-    transition-delay: 0.5s;
-
-}
-#container-1:hover + #container-2{
-    visibility: hidden;
-   
-    opacity: 0;
-    transition-delay: .5s;
-    transition:all .7s;
-}
-#container-1:hover > form > input{
-    border-style: solid;
-}
-
-#container-2{
-    background:#d006063b;
-    display: grid;
-    
-}
-#container-2:hover{
-    background-color: #dc05058c;
+.container {
+    padding: 1em;
+    width: 35%;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 0.63);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.7s;
 }
 
-
-#flex{
-    display: flex;
-   
+#container-1 {
+    overflow: hidden;
+    display: block;
+    pointer-events: all;
 }
+
+#container-1:hover {
+    background-color: rgba(245, 245, 245, 1);
+    transform: scale(1.05);
+}
+
+#container-1:hover + #container-2 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#container-2 {
+    display: none;
+    background: rgba(208, 6, 6, 0.23);
+}
+
+#container-2:hover {
+    background-color: rgba(220, 5, 5, 0.55);
+}
+
+#flex {
+    display: flex;
+    justify-content: space-between;
+}
+
 input[type=text], input[type=password] {
     font-size: 20px;
     display: block;
-    margin: auto;
+    width: 90%;
+    margin: 10px auto;
     border-radius: 15px;
     padding: 8px;
-    border-style: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
-input[type = submit], button[type = button]{
 
-    width: 80px;
+input[type=submit], button[type=button] {
+    width: 45%;
     height: 50px;
     border-radius: 10px;
-    box-shadow: 3px 3px 3px 3px;
-   border-style: none;
-   margin: auto;
- 
-   font-weight: bold;
-
+    border: none;
+    margin: 10px auto;
+    font-weight: bold;
+    cursor: pointer;
 }
-input[type = submit]{
+
+input[type=submit] {
     background-color: #FF4459;
-    color: black;
+    color: white;
 }
-button[type = button]{
+
+button[type=button] {
     background-color: black;
-    color:#FF4459;
-
+    color: #FF4459;
 }
-img{
-    width: 300px;
-    border-radius: 50px;
-    
+
+img {
+    width: 100%;
+    border-radius: 10px;
     justify-self: center;
-    
 }
 
-input[type = submit]:hover, button[type = button]:hover{
-
+input[type=submit]:hover, button[type=button]:hover {
     border-radius: 4px;
-    box-shadow: 0 0 0 0;
-    transition: .3s;
+    box-shadow: 0 0 5px #999;
+    transition: 0.3s;
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #title {
+        font-size: 28px;
+        margin-top: 10%;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    input[type=text], input[type=password] {
+        width: 95%;
+    }
+
+    #container-2 {
+        display: none;
+    }
 }
