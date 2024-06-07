@@ -31,7 +31,7 @@
         <br>
         <div id = "flex">
         <input id = "login" value="Login" type="submit">
-        <button type="button"><a href="seller_reg.html"> Register</a></button>
+        <button type="button" id="btn_reg"> Register</button>
       </div>
         
 
@@ -59,17 +59,27 @@
     </div>
   </span>
   
-  <!-- <script>
+  <script>
     document.getElementById('login_form').addEventListener('submit', (event) => {
+      const isBusiness = document.getElementById('usertype').checked;
         event.preventDefault(); // Prevent the form from submitting the traditional way
-        const isBusiness = document.getElementById('usertype').checked;
         if (!isBusiness) {
             window.location.href = 'homepage_user.html';
         } else {
-            window.location.href = 'buyerhomepage.html';
+            window.location.href = 'Seller_homepage.html';
         }
     });
-</script> -->
+    document.getElementById('btn_reg').addEventListener("click",(event)=>{
+      const isBusiness = document.getElementById('usertype').checked;
+
+      if(isBusiness){
+        window.location.href = "seller_reg.html";
+      }
+      else{
+        window.location.href= "buyer_reg.html";
+      }
+    })
+</script> 
 </span>
 </body>
 </html>

@@ -1,88 +1,37 @@
+/* menu.css */
+
+/* Reset some default styles */
 body {
     display: block;
     flex-direction: column;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:beige;
+    background-color: #fff; /* Light background color */
     justify-content: center;
     align-items: center;
-    
 }
-.container {
-   width: 50%;
-    margin: auto;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    place-items: center;
-}
-h1 {
-    text-align: center;
-    color: #333;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    
-}
-label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-input[type="text"], input[type="number"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-input[type="file"] {
-    padding: 10px;
-    font-size: 16px;
-}
-button {
-    margin-top: 20px;
-    padding: 10px;
-    border: none;
-    background-color: #28a745;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #218838;
-}
+
 /* Basic styling for the navigation bar */
 nav {
-    
     position: fixed; /* Fix the navbar at the top */
     top: 0;
-   place-content: center; /* Align the navbar to the top of the page */
     width: 100%; /* Make the navbar span the full width of the page */
     display: flex;
     justify-content: center;
-    
-    margin: 10px 0 ;
-    padding:20px;
-    
-    
-    
+    padding: 20px;
+  
     z-index: 1000; /* Ensure the navbar is above other content */
     transition: all 0.7s;
 }
-.navbar:hover{
+
+.navbar:hover {
     transform: scale(1.2);
     transition: all .7s;
 }
 
-/* Add some padding to the top of the body to prevent content from being hidden behind the navbar */
-
-
 .navbar {
-    background-color: #333; /* Background color of the navbar */
+    background-color: #ff6347; /* Tomato color to match the theme */
     font-family: Arial, sans-serif;
     width: fit-content;
     list-style-type: none; /* Remove bullets */
@@ -107,13 +56,13 @@ nav {
 }
 
 .navbar a:hover {
-    background-color: #575757; /* Change background on hover */
+  
     border-radius: 4px; /* Rounded corners on hover */
 }
+
+/* Shop Image styling */
 .shop_image {
     background-image: url("assets/shop_1bg.jpeg");
-
-
     height: 30vh;
     background-repeat: no-repeat;
     justify-content: space-around;
@@ -121,28 +70,20 @@ nav {
 }
 
 .shop_profile {
-
     position: relative;
     background-image: url("assets/shop_profile.png");
     background-size: 100px;
     background-repeat: no-repeat;
     border-radius: 50px;
     z-index: 200;
-
     height: 100px;
     width: 100px;
     border-style: solid;
     border-color: white;
     align-self: flex-end;
-
-
 }
 
-.item{
-    width: 100px;
-    border-radius: 25px;
-}
-
+/* Menu styling */
 .menu {
     border-style: solid;
     border-width: 1px;
@@ -150,31 +91,78 @@ nav {
     margin-right: 25%;
     margin-top: 10%;
     margin-bottom: 5%;
-    background-color: honeydew;
-   
-}
-
-p {
-
-    letter-spacing: 3px;
-    word-spacing: 6px;
-    ;
-    line-height: 18px;
-    text-align: center;
-    font-size: 15px;
-
+    background-color: #f5f5dc; /* Beige background for menu */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 h2 {
-    color: chocolate;
+    color: #8b4513; /* Brown color for headings */
     text-align: center;
-    font-family: cursive;
-    font-size: 28px;
-
+    font-family: 'Brush Script MT', cursive; /* Cursive font for a restaurant feel */
+    font-size: 36px; /* Larger font size for headings */
 }
 
-h3,
-h1 {
+p {
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    line-height: 22px;
     text-align: center;
+    font-size: 18px; /* Slightly larger font size for menu items */
+    margin-bottom: 10px; /* Add some space between menu items */
 }
 
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    place-items: center;
+}
+
+h3 {
+    text-align: center;
+    color: #000;; /* Dark gray color for headings */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #28a745; /* Green color for button */
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green color on hover */
+}

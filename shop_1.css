@@ -36,7 +36,7 @@ body {
 }
 
 .navbar {
-    background-color: #333;
+    background-color: #ff6347; /* Match navbar color */
     /* Background color of the navbar */
     font-family: Arial, sans-serif;
     width: fit-content;
