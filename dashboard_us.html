@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Dashboard</title>
+</head>
+<body>
+    <main>
+        <h1>Dashboard</h1>
+        <div class="date">
+            <input type="date">
+        </div>
+            <div class = "insights">
+                <div class="sales">
+                    <span class="material-symbols-outlined">
+                        analytics
+                        </span>
+                        <div class="middle">
+                        <div class="left">
+                            <h3>Total Sales</h3>
+                            <h1>ksh. 45,900</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36' ></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                        <small class="small-subscript">Last 24 Hours</small>
+                </div>
+                
+                <!-----------------End of Sales----------------->
+                <div class="expenses">
+                    <span class="material-symbols-outlined">
+                        bar_chart
+                        </span>
+                        <div class="middle">
+                        <div class="left">
+                            <h3>Total Expenses</h3>
+                            <h1>ksh. 76,900</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36' ></circle>
+                            </svg>
+                            <div class="number">
+                                <p>61%</p>
+                            </div>
+                        </div>
+                    </div>
+                        <small class="small-subscript">Last 24 Hours</small>
+                </div>
+                
+                <!-----------------End of Expenses----------------->
+                <div class="income">
+                    <span class="material-symbols-outlined">
+                       stacked_line_chart
+                        </span>
+                        <div class="middle">
+                        <div class="left">
+                            <h3>Total Sales</h3>
+                            <h1>ksh. 32,100</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36' ></circle>
+                            </svg>
+                            <div class="number">
+                                <p>31%</p>
+                            </div>
+                        </div>
+                    </div>
+                        <small class="small-subscript">Last 24 Hours</small>
+                </div>
+                
+                <!-----------------End of Income----------------->
+            </div>
+            <div class="recent-order">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Order Date</th>
+                            <th>Order Total</th>
+                            <th>Order Payment</th>
+                            <th>Order Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>04/07/2024</td>
+                            <td>ksh.4,400</td>
+                            <td>Successful</td>
+                            <td class ="warning">Pending</td>
+                            <td class ="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>04/07/2024</td>
+                            <td>ksh.4,400</td>
+                            <td>Successful</td>
+                            <td class ="warning">Pending</td>
+                            <td class ="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>04/07/2024</td>
+                            <td>ksh.4,400</td>
+                            <td>Successful</td>
+                            <td class ="warning">Pending</td>
+                            <td class ="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>04/07/2024</td>
+                            <td>ksh.4,400</td>
+                            <td>Successful</td>
+                            <td class ="warning">Pending</td>
+                            <td class ="primary">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href ="#">Show All</a>
+            </div>
+    </main>
+</body>
+</html>
