@@ -169,3 +169,9 @@ h1 {
     display: flex;
     margin: 0 50%;
 }
+@media screen and (max-width: 768px){
+.menu{
+    margin: 15px 0;
+    width:100%;
+}
+}
