@@ -111,7 +111,7 @@ app.post('/login', async (req, res) => {
     sessionStore.email = user.email;
 
     
-      res.redirect('/buyerhomepage.html');
+      res.redirect('/.html');
       
 
       //  authorized
