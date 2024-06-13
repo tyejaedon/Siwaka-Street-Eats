@@ -1,0 +1,229 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/vendor.png.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+.text-box{
+    width: 90;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+margin: 10px 0 40px;
+font-size: 14px;
+color:#fff;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+
+}
+.register{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7))
+
+    
+    
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before{
+content: '';
+position:absolute;
+left: 0;
+bottom: 0;
+height: 3px;
+width: 30px;
+background:  linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7))
+
+}
+.container form .user-details{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+form .user-details .input-box{
+    margin: 20px 0 12px 0;
+    width:calc(100% / 2 - 20px);
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+
+}
+.user-details .input-box input{
+height: 45px;
+width: 100%;
+outline: none;
+border-radius: 5px;
+border: 1px solid #ccc;
+padding-left: 15px ;
+font-size: 16px;
+border-bottom-width: 2px;
+transition: all 0.3s ease;
+
+}
+.user-details .input-box input:focus,
+    .user-details .input-box input:valid{
+}
+form.button{
+    height: 45px;
+    margin: 45px 0;
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7))
+
+
+}
+
+    form .button input:hover{
+        background:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7))
+
+    }
+    @media(max-width: 584px){
+        .container{
+             max-width: 100%;
+        }
+    }
+    nav{
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav img{
+        width:150px;
+    }
+    .nav-links{
+        flex: 1;
+        text-align: right;
+    }
+    .nav-links ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+    .nav-links ul li a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+
+    }
+
+    .contain{
+        max-width:850px;
+        width: 100%;
+        background: #fff;
+        padding: 40px 30px;
+
+    }
+   .about-body {
+    font-family: 'Poppins',sans-serif;
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+    position: relative;
+    
+    background:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/vendor.png.png);
+    padding: 30px;
+
+    }
+
+.contain .form-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.contain form{
+    height: 100%;
+    width:  100%;
+    background: #fff;
+}
+
+
+    .form-content .login-form{
+        width:calc(100% / 2 - 25px);
+
+
+    }
+    form .form-content .title{
+        font-size: 24px;
+        font-weight: 500;
+        color: #333;
+        position: relative;
+        
+    }
+
+    form .form-content .title::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 25px;
+        background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+    }
+    form .form-content .input-boxes{
+        margin-top: 30px;
+
+    }
+    a[href="learning.html"] {
+        padding-top: 0;
+        text-align: left;
+        text-decoration: none;
+        color: red;  /* Example color */
+        font-weight: bold;  /* Example font weight */
+    }
+   

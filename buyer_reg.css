@@ -1,5 +1,5 @@
 body {
-    background: url('assets/bg.jpeg') no-repeat center center fixed; /* Change the URL to an appropriate food-related background image */
+    background: url('assets/bg.png') no-repeat center center fixed; /* Change the URL to an appropriate food-related background image */
     background-size: cover;
     font-family: 'Arial', sans-serif;
     color: #333;
@@ -8,19 +8,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
- 
+    height: 100vh;
 }
 
 .container {
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
-    width: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
 }
 
 .form-box {
-   width: 90%;
+  width: 90%;
     margin: 0 auto;
 }
 
@@ -31,18 +31,15 @@ body {
     color: #d35400; /* Food-related color */
 }
 
-.form-group {
+.input-group {
     margin-bottom: 15px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-    font-weight: bold;
+.input-field {
+    margin-bottom: 10px;
 }
 
-.form-group input, .form-group select {
+.input-field input {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
@@ -57,7 +54,7 @@ body {
     justify-content: center;
 }
 
-button[type="submit"] {
+#RegisterBtn {
     background-color: #d35400; /* Food-related color */
     color: #fff;
     padding: 10px 20px;
@@ -67,6 +64,6 @@ button[type="submit"] {
     font-size: 1em;
 }
 
-button[type="submit"]:hover {
+#RegisterBtn:hover {
     background-color: #e67e22; /* Hover color */
 }

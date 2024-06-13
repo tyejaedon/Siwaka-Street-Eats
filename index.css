@@ -1,79 +1,77 @@
-:root {
-    --image: url("assets/bg2.jpg");
-}
-
 body {
+    background: url('assets/bg3.jpeg') no-repeat center center fixed;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    font-size: 16px; /* Set a base font size */
-    background: #F3E0E2;
-    background-image: var(--image);
-    background-size: cover;
-    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    margin: 0;
+    color: #333;
 }
 
 #title {
-    text-align: center;
-    font-size: 42px;
-    font-family: "Dancing Script", cursive;
-    font-weight: 500;
-    margin-top: 20px;
-}
-
-p {
-    font-family: "Dancing Script", cursive;
-    text-align: justify;
-}
-
-h2 {
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+    color: #d35400;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #f1c40f;
 }
 
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
     width: 100%;
 }
 
 .container {
-    padding: 1em;
-    width: 35%;
-    border-radius: 10px;
-    background-color: rgba(245, 245, 245, 0.63);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.7s;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 25%;
+    text-align: center;
 }
 
-#container-1 {
-    overflow: hidden;
-    display: block;
-    pointer-events: all;
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #d35400;
 }
 
-#container-1:hover {
-    background-color: rgba(245, 245, 245, 1);
-    transform: scale(1.05);
+input[type="text"], input[type="password"], input[type="submit"], button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
 }
 
-#container-1:hover + #container-2 {
-    visibility: hidden;
-    opacity: 0;
+input[type="text"], input[type="password"] {
+    background-color: #f9f9f9;
 }
 
-#container-2 {
-    display: none;
-    background: rgba(208, 6, 6, 0.23);
+input[type="submit"], button {
+    background-color: #d35400;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1em;
 }
 
-#container-2:hover {
-    background-color: rgba(220, 5, 5, 0.55);
+input[type="submit"]:hover, button:hover {
+    background-color: #e67e22;
+}
+
+label {
+    font-size: 1em;
+    color: #333;
 }
 
 #flex {
@@ -81,48 +79,19 @@ h2 {
     justify-content: space-between;
 }
 
-input[type=text], input[type=password] {
-    font-size: 20px;
-    display: block;
-    width: 90%;
-    margin: 10px auto;
-    border-radius: 15px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+#login {
+    width: 48%;
 }
 
-input[type=submit], button[type=button] {
-    width: 45%;
-    height: 50px;
-    border-radius: 10px;
-    border: none;
-    margin: 10px auto;
-    font-weight: bold;
-    cursor: pointer;
+#btn_reg {
+    width: 48%;
+    background-color: #f39c12;
 }
 
-input[type=submit] {
-    background-color: #FF4459;
-    color: white;
+#btn_reg:hover {
+    background-color: #e67e22;
 }
 
-button[type=button] {
-    background-color: black;
-    color: #FF4459;
-}
-
-img {
-    width: 100%;
-    border-radius: 10px;
-    justify-self: center;
-}
-
-input[type=submit]:hover, button[type=button]:hover {
-    border-radius: 4px;
-    box-shadow: 0 0 5px #999;
-    transition: 0.3s;
-}
 
 /* Media query for screens smaller than 768px */
 @media screen and (max-width: 768px) {

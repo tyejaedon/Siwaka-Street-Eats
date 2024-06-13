@@ -1,6 +1,4 @@
-/* menu.css */
 
-/* Reset some default styles */
 body {
     display: block;
     flex-direction: column;
@@ -14,14 +12,14 @@ body {
 
 /* Basic styling for the navigation bar */
 nav {
-    position: fixed; /* Fix the navbar at the top */
+    position: fixed; 
     top: 0;
-    width: 100%; /* Make the navbar span the full width of the page */
+    width: 100%; 
     display: flex;
     justify-content: center;
     padding: 20px;
   
-    z-index: 1000; /* Ensure the navbar is above other content */
+    z-index: 1000; 
     transition: all 0.7s;
 }
 
@@ -31,11 +29,11 @@ nav {
 }
 
 .navbar {
-    background-color: #ff6347; /* Tomato color to match the theme */
+    background-color: #ff6347; 
     font-family: Arial, sans-serif;
     width: fit-content;
-    list-style-type: none; /* Remove bullets */
-    display: flex; /* Use flexbox for horizontal layout */
+    list-style-type: none; 
+    display: flex; 
     padding: 0;
     margin: 0;
     justify-content: center;
@@ -44,20 +42,20 @@ nav {
 }
 
 .navbar li {
-    margin: 0 15px; /* Space between each item */
+    margin: 0 15px; 
 }
 
 .navbar a {
-    display: block; /* Make the link fill the list item */
-    color: white; /* Text color */
-    text-align: center; /* Center text within the link */
-    padding: 14px 20px; /* Padding around the text */
-    text-decoration: none; /* Remove underline */
+    display: block; 
+    color: white; 
+    text-align: center; 
+    padding: 14px 20px; 
+    text-decoration: none;
 }
 
 .navbar a:hover {
   
-    border-radius: 4px; /* Rounded corners on hover */
+    border-radius: 4px; 
 }
 
 /* Shop Image styling */
