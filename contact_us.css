@@ -9,7 +9,7 @@
     left: 0;
     width: 100%;
     min-height: 100vh;
-    background-image: url(assets/contactbg.jpg);
+    background-image: url(assets/alternativebg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
@@ -119,4 +119,10 @@ button :hover {
         grid-template-columns: repeat(1fr);
         
     }
+}
+.p-layout{
+    font-size: 15px;
+    color: #131313;
+    -webkit-text-stroke: #000000;
+    font-family: verdana;
 }
