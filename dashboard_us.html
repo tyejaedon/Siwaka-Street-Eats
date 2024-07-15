@@ -7,9 +7,18 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <link rel="icon" type="image/x-icon" href ="assets/favicon2 (2).png">
     <title>Dashboard</title>
 </head>
 <body>
+    <header>
+        <div class="welcome-message">
+            <h2>Welcome back, <span id="username">Khajira</span>!</h2>
+        </div>
+        <div class="logout-button">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
     <main>
         <h1>Dashboard</h1>
         <div class="date">
@@ -133,5 +142,10 @@
                 <a href ="#">Show All</a>
             </div>
     </main>
+    <script>
+        function logout() {
+            window.location.href ='index.html';
+        }
+    </script>
 </body>
 </html>
