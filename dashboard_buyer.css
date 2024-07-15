@@ -1,0 +1,281 @@
+/* Root Variable */
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    --button-bg: var(--color-primary);
+    --button-bg-hover: var(--color-primary-variant);
+    --button-text: var(--color-white);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Poppins, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+a {
+    color: var(--color-dark);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 0.87rem;
+}
+
+h4 {
+    font-size: 0.8rem;
+}
+
+h5 {
+    font-size: 0.77rem;
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+.small-subscript {
+    color: var(--color-info-dark);
+}
+
+p {
+    color: var(--color-dark-variant);
+}
+
+b {
+    color: var(--color-dark);
+}
+
+.primary {
+    color: var(--color-primary);
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+/* =============================== HEADER =============== */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--color-white);
+    width: 100%;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.user-profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-picture img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-details {
+    text-align: right;
+}
+
+.profile-details h3 {
+    margin-bottom: 0.2rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background: var(--button-bg);
+    color: var(--button-text);
+    border-radius: var(--border-radius-2);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: var(--button-bg-hover);
+}
+
+/* =============================== MAIN =============== */
+main {
+    margin-top: 6rem; /* Adjust margin to fit fixed header */
+    padding: 1rem;
+}
+
+main .date {
+    display: inline-block;
+    background: var(--color-light);
+    border-radius: var(--border-radius-1);
+    margin-top: 1rem;
+    padding: 0.5rem 1.6rem;
+}
+
+main .date input[type="date"] {
+    background: transparent;
+    color: var(--color-dark);
+}
+
+.dashboard {
+    margin-top: 2rem;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2rem 4rem var(--color-light);
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+.card table {
+    width: 100%;
+}
+
+.card table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--color-light);
+}
+
+/* Balance Card */
+.balance-card {
+    position: relative;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: var(--color-light);
+    border-radius: var(--border-radius-3);
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.progress {
+    height: 100%;
+    background: var(--color-success);
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.toggle-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle-checkbox:checked::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: var(--color-primary);
+    border-radius: var(--border-radius-1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#balanceContent {
+    display: none;
+}
